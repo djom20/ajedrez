@@ -1,0 +1,47 @@
+#board table {
+	border: 10px solid black;
+	margin: 0 auto;
+	width: 400px;
+	float: left;
+}
+
+#board table tr > td {
+	padding: 15px;
+}
+
+#board table tr:nth-child(even) > td:nth-child(odd) {
+	background-color: #000;
+	color: #fff;
+}
+
+#board table tr:nth-child(odd) > td:nth-child(even) {
+	background-color: #000;
+	color: #fff;
+}
+
+table.rigth {
+	border: 10px solid white !important;
+	width: 20px !important;
+}
+
+table.rigth tr > td.noColor {
+	background-color: #fff !important;
+	color: #000 !important;
+}
+
+table.bottom {
+	border: 10px solid white !important;
+	margin-left: 62px !important;
+	width: 20px !important;
+	float: none !important;
+	display: block;
+}
+
+table.bottom tr > td.noColor {
+	background-color: #fff !important;
+	color: #000 !important;
+}
+
+#board table.bottom tr > td {
+	padding: 19px;
+}
