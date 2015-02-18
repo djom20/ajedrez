@@ -45,3 +45,18 @@ table.bottom tr > td.noColor {
 #board table.bottom tr > td {
 	padding: 19px;
 }
+
+.btn {
+	color: #333;
+	background-color: #fff;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	background-image: none;
+	border-radius: 4px;
+	box-shadow: none;
+}

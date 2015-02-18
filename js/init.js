@@ -1,6 +1,7 @@
 $(function(){
 	$ajedrez.createBoard('#board');
-	$ajedrez.chessPieces();
+	$ajedrez.createControls('.row2');
+	$ajedrez.chessPieces('#board');
 });
 
 window.$ajedrez = {
@@ -60,8 +61,21 @@ window.$ajedrez = {
 		$(id).append(board1);
 		$(id).append(board3);
 	},
-	chessPieces: function(){
+	createControls: function(id){
+		this.log('Creating Controls');
+		var button1 = $('<button/>', { class: 'btn' }).text('Play');
+		var button2 = $('<button/>', { class: 'btn' }).text('Pause');
+		var button3 = $('<button/>', { class: 'btn' }).text('Stop');
+
+		$(id).append(button1, button2, button3);
+	},
+	chessPieces: function(id){
 		this.log('Load Chess Pieces');
+		var obj = $('<img/>').attr("src","img/reina_negra.png");
+
+
+
+		// $(id).append(obj);
 	},
 	startGame: function(){
 
