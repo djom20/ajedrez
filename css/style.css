@@ -1,3 +1,13 @@
+.row1, .row2, .row3 {
+	margin: 0 auto;
+	width: 462px;
+	text-align: center;
+}
+
+.row3 {
+
+}
+
 #board table {
 	border: 10px solid black;
 	margin: 0 auto;
@@ -32,7 +42,7 @@ table.rigth tr > td.noColor {
 table.bottom {
 	border: 10px solid white !important;
 	margin-left: 62px !important;
-	width: 20px !important;
+	width: 380px !important;
 	float: none !important;
 	display: block;
 }
@@ -47,15 +57,28 @@ table.bottom tr > td.noColor {
 }
 
 .btn {
-	background-color: #fff;
 	border-radius: 4px;
+	border: 1px solid transparent;
 	box-shadow: none;
-	color: #333;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 400;
-	margin-bottom: 0;
+	margin: 5px;
 	padding: 6px 12px;
 	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.btn-default {
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btn-default:hover {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
 }
