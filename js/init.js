@@ -1,7 +1,7 @@
 $(function(){
 	$ajedrez.createBoard('#board');
 	$ajedrez.createControls('.row2');
-	$ajedrez.chessPieces('#board');
+	// $ajedrez.chessPieces('#board');
 });
 
 window.$ajedrez = {
@@ -63,17 +63,20 @@ window.$ajedrez = {
 	},
 	createControls: function(id){
 		this.log('Creating Controls');
-		var button1 = $('<button/>', { class: 'btn' }).text('Play');
-		var button2 = $('<button/>', { class: 'btn' }).text('Pause');
-		var button3 = $('<button/>', { class: 'btn' }).text('Stop');
+		var div 	= $(id);
+		var text 	= ['Play', 'Pause', 'Stop'];
 
-		$(id).append(button1, button2, button3);
+		for (var i = 0; i < 3; i++) {
+			$('<button/>', { class: 'btn' })
+				.text(text[i])
+				.click(function(){
+					alert(text[i] + ' Game');
+				}).appendTo(div);
+		}
 	},
 	chessPieces: function(id){
 		this.log('Load Chess Pieces');
 		var obj = $('<img/>').attr("src","img/reina_negra.png");
-
-
 
 		// $(id).append(obj);
 	},
