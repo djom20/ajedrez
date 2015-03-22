@@ -12,6 +12,7 @@ window.$ajedrez = {
 		window.$moving 	= null;
 		window.$temp 	= [];
 		window.$board 	= [];
+		window.$pieces 	= [];
 	},
 	createBoard: function(id){
 		this.createObjs();
@@ -75,7 +76,8 @@ window.$ajedrez = {
 			$('<button/>', { class: 'btn btn-default' })
 				.text(text[i])
 				.click(function(){
-					alert(text[i] + ' Game');
+					// alert(text[i] + ' Game');
+					$ajedrez.chessPieces('#board');
 				}).appendTo($(id));
 		}
 	},
@@ -86,9 +88,47 @@ window.$ajedrez = {
 			.attr("src","img/reina_negra.png")
 			.attr("draggable","true")
 			.attr("ondragstart","drag(this, event)");
+		
+		$pieces.push(obj);
+		$(id).append(obj);
+
+		obj = $('<img/>')
+			.attr("id","alfil_negro")
+			.attr("src","img/alfil_negro.png")
+			.attr("draggable","true")
+			.attr("ondragstart","drag(this, event)");
+
+		$pieces.push(obj);
+		$(id).append(obj);
+
+		obj = $('<img/>')
+			.attr("id","caballo_negro")
+			.attr("src","img/caballo_negro.png")
+			.attr("draggable","true")
+			.attr("ondragstart","drag(this, event)");
+
+		$pieces.push(obj);
+		$(id).append(obj);
+
+		obj = $('<img/>')
+			.attr("id","rey_negro")
+			.attr("src","img/rey_negro.png")
+			.attr("draggable","true")
+			.attr("ondragstart","drag(this, event)");
+
+		$pieces.push(obj);
+		$(id).append(obj);
+
+		obj = $('<img/>')
+			.attr("id","torre_negra")
+			.attr("src","img/torre_negra.png")
+			.attr("draggable","true")
+			.attr("ondragstart","drag(this, event)");
+
+		$pieces.push(obj);
+		$(id).append(obj);
 
 		this.log('Loading Chess Pieces on Board');
-		$(id).append(obj);
 	},
 	clearBoard: function(){
 		$temp 	= [];

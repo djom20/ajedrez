@@ -9,7 +9,7 @@
 }
 
 #board table {
-	border: 10px solid black;
+	border: 10px solid #333;
 	margin: 0 auto;
 	width: 400px;
 	float: left;
@@ -20,12 +20,12 @@
 }
 
 #board table tr:nth-child(even) > td:nth-child(odd) {
-	background-color: #000;
+	background-color: #333;
 	color: #fff;
 }
 
 #board table tr:nth-child(odd) > td:nth-child(even) {
-	background-color: #000;
+	background-color: #333;
 	color: #fff;
 }
 
@@ -41,7 +41,7 @@ table.rigth tr > td.noColor {
 
 table.bottom {
 	border: 10px solid white !important;
-	margin-left: 62px !important;
+	margin-left: 56px !important;
 	width: 380px !important;
 	float: none !important;
 	display: block;
